@@ -13,9 +13,9 @@
 		<div class="entry-thumbnail"><?php the_post_thumbnail(); ?></div>
 	<?php endif; ?>
 	<?php if (!is_front_page()) {?>	
-	<header class="entry-header">
+	<!-- <header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+	</header> --><!-- .entry-header -->
 	<?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
