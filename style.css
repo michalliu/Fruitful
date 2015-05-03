@@ -842,6 +842,7 @@ ul#lang-select-popup{
 .main-navigation ul li.current-menu-item a,
 .main-navigation ul li.current-menu-parent a,
 .main-navigation ul li.current_page_parent a,
+.main-navigation ul li.current-page-ancestor a,
 .main-navigation ul li.current-menu-ancestor a {
     background:none repeat scroll 0 0 #F15A23;
     color:#fff;
