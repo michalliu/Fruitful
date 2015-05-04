@@ -1895,3 +1895,14 @@ if (!class_exists('ffs')){
 	}
 	add_action('admin_notices', 'fruitful_shortcodes_admin_notice');
 }
+
+add_filter( 'get_avatar', 'fruitful_get_avatar');
+if (!function_exists('fruitful_get_avatar')) {
+    function fruitful_get_avatar($avatar){
+        // replace to our proxy
+        $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gogo.mqmaker.com/moc-ratavarg-yna",$avatar);
+        // using https
+        $avatar = str_replace("http://", "https://", $avatar);
+        return $avatar;
+    }
+}
