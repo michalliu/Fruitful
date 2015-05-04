@@ -89,7 +89,7 @@ function fruitful_fonts_url() {
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+		$fonts_url = add_query_arg( $query_args, "//gogo.mqmaker.com/moc-sipaelgoog-stnof/css" );
 	}
 
 	return $fonts_url;
@@ -348,17 +348,17 @@ if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
 		}
 		
 		$fonts_ = array();
-		$fonts_[] = 'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Abril+Fatface';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Ubuntu:400,300italic,400italic,500,500italic,700,700italic,300&subset=latin,greek,latin-ext,cyrillic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
-		$fonts_[] = 'fonts.googleapis.com/css?family=Droid+Sans:400,700';	
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Arvo:400,400italic,700,700italic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Vollkorn:400,400italic,700,700italic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Abril+Fatface';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Ubuntu:400,300italic,400italic,500,500italic,700,700italic,300&subset=latin,greek,latin-ext,cyrillic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Old+Standard+TT:400,400italic,700';
+		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Droid+Sans:400,700';
 
 		if (!empty($inFont)) {
 			$font_name = $inFont;
