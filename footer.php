@@ -24,9 +24,11 @@
 					?>
 				</div>
 			</div>
-			<div id="back-top">
-				<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
-			</div>
+            <div class="toplink" id="back-top">
+                <a href="#top" title="go to top">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                </a>
+            </div>
 		</footer><!-- #colophon .site-footer -->
 	<!--WordPress Development by Fruitful Code-->
 <?php wp_footer(); ?>
