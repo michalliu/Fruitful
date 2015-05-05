@@ -167,14 +167,7 @@ jQuery(window).bind('scroll', function() {
 	} else {
 		jQuery('#back-top').fadeOut('slow');
 	}
-    var fixlink = jQuery('#wiki_fixlink');
-    if(fixlink.length > 0) {
-        if (scrollTop > jQuery("#page-header").height()) {
-            fixlink.fadeIn('slow');
-        } else {
-            fixlink.fadeOut('slow');
-        }
-    }
+
 });
 
 function fixed_header(){
