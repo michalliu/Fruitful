@@ -1660,7 +1660,7 @@ input[type="password"] {
 }
 .wiki_fixlink {
     position: fixed;
-    top: 100px;
+    top: 150px;
     right: 50px;
     padding: 5px 8px 0 5px;
     border: solid 1px #ddd;
