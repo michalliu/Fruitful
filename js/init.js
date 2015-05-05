@@ -162,7 +162,7 @@ jQuery(window).bind('scroll', function() {
 			jQuery(".head-container").removeClass('fixed is_indent');
 	}
 	
-	if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
+	if(jQuery(window).scrollTop() > jQuery(window).height()) {
 		jQuery('#back-top').fadeIn('slow'); 
 	} else {
 		jQuery('#back-top').fadeOut('slow');
