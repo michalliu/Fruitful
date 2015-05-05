@@ -305,6 +305,10 @@ function fruitful_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
+    if (is_page()) {
+        wp_enqueue_style('github-markdown', get_template_directory_uri() . '/css/github-markdown.css');
+    }
 }
 }
 add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
