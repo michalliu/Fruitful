@@ -141,8 +141,9 @@ jQuery(window).bind('scroll', function() {
 	var vContentHeight 	 = jQuery('body').outerHeight();
 	var vWinHeight  	 = jQuery(window).height();
 	var vHeaderContainer = jQuery('.head-container').outerHeight();
-	
-	if ((vContentHeight - vWinHeight) > 0) {
+    var scrollTop = jQuery(window).scrollTop();
+
+    if ((vContentHeight - vWinHeight) > 0) {
 		if (((vContentHeight - vWinHeight) - (vHeaderContainer+125)) > vHeaderContainer) {
 			is_sufficient_height = true;
 		}
@@ -161,12 +162,19 @@ jQuery(window).bind('scroll', function() {
 	} else {
 			jQuery(".head-container").removeClass('fixed is_indent');
 	}
-	
-	if(jQuery(window).scrollTop() > jQuery(window).height()) {
+	if(scrollTop > jQuery(window).height()) {
 		jQuery('#back-top').fadeIn('slow'); 
 	} else {
 		jQuery('#back-top').fadeOut('slow');
 	}
+    var fixlink = jQuery('#wiki_fixlink');
+    if(fixlink.length > 0) {
+        if (scrollTop > jQuery("#page-header").height()) {
+            fixlink.fadeIn('slow');
+        } else {
+            fixlink.fadeOut('slow');
+        }
+    }
 });
 
 function fixed_header(){
