@@ -1911,3 +1911,9 @@ if (!function_exists('fruitful_get_avatar')) {
         return $avatar;
     }
 }
+add_filter( 'emoji_url', 'fruitful_emoji_url');
+if ( ! function_exists( 'fruitful_emoji_url' ) ) {
+    function fruitful_emoji_url($url) {
+        return "https://gogo.mqmaker.com/gro-w-s/images/core/emoji/72x72/";
+    }
+}
