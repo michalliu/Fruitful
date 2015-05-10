@@ -1917,3 +1917,22 @@ if ( ! function_exists( 'fruitful_emoji_url' ) ) {
         return "https://gogo.mqmaker.com/gro-w-s/images/core/emoji/72x72/";
     }
 }
+
+add_filter( 'woocommerce_breadcrumb_home_url', 'fruitful_woocommerce_breadcrumb_home_url');
+if ( ! function_exists( 'fruitful_woocommerce_breadcrumb_home_url' ) ) {
+    function fruitful_woocommerce_breadcrumb_home_url ($home_url) {
+        return "/products/";
+    }
+}
+
+add_filter( 'woocommerce_get_breadcrumb', 'fruitful_woocommerce_get_breadcrumb');
+if ( ! function_exists( 'fruitful_woocommerce_get_breadcrumb' ) ) {
+    function fruitful_woocommerce_get_breadcrumb ($crumbs) {
+        $crumbs[0][0] = "Products"; // 字符串 Home 替换为 Products
+        if ($crumbs[0][0] == $crumbs[1][0]){ // 这是首页，不显示导航
+            //array_splice($crumbs, 0, 1);
+            return array();
+        }
+        return $crumbs;
+    }
+}
