@@ -271,11 +271,11 @@ body.woocommerce-page .woocommerce-result-count{display:none !important}
 body.single.woocommerce .woocommerce-breadcrumb,
 body.single.woocommerce-page .woocommerce-breadcrumb{margin-bottom:40px;}
 .archive.woocommerce .woocommerce-breadcrumb,
-.archive.woocommerce-page .woocommerce-breadcrumb{float:left; width:auto;max-width:423px; margin-bottom:0px;line-height:35px;}
+.archive.woocommerce-page .woocommerce-breadcrumb{float:left; width:auto;max-width:423px; margin-bottom:40px;line-height:35px;}
 .archive.woocommerce.post-type-archive-product .woocommerce-breadcrumb,
-.archive.woocommerce-page.post-type-archive-product .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:0px;line-height:35px;}
+.archive.woocommerce-page.post-type-archive-product .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:40px;line-height:35px;}
 .archive.woocommerce.tax-product_cat .woocommerce-breadcrumb,
-.archive.woocommerce-page.tax-product_cat .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:0px;line-height:35px;}
+.archive.woocommerce-page.tax-product_cat .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:40px;line-height:35px;}
 .archive.woocommerce .woocommerce-breadcrumb a,
 .archive.woocommerce-page .woocommerce-breadcrumb a{line-height:35px;}
 
