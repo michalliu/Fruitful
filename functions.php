@@ -1936,3 +1936,4 @@ if ( ! function_exists( 'fruitful_woocommerce_get_breadcrumb' ) ) {
         return $crumbs;
     }
 }
+function woocommerce_catalog_ordering() { echo '<p class="woocommerce-breadcrumb">&nbsp;</p>'; }
