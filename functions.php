@@ -1937,3 +1937,20 @@ if ( ! function_exists( 'fruitful_woocommerce_get_breadcrumb' ) ) {
     }
 }
 function woocommerce_catalog_ordering() { echo '<p class="woocommerce-breadcrumb">&nbsp;</p>'; }
+
+/*google analytics*/
+add_action('wp_footer', 'fruitful_add_googleanalytics');
+if (!function_exists('fruitful_add_googleanalytics')) {
+    function fruitful_add_googleanalytics() {
+        echo "<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66239896-1', 'auto');
+  ga('send', 'pageview');
+
+</script>";
+    }
+}
