@@ -1662,6 +1662,34 @@ if(!function_exists('fruitful_is_latest_posts_page')){
 	}
 }
 
+if ( ! function_exists( 'fruitful_get_content_news' ) ){
+    function mq_get_content_news(){
+        ?>
+        <section id="primary" class="content-area">
+            <div id="content" class="site-content" role="main">
+
+                <?php if ( have_posts() ) : ?>
+                    <?php /* Start the Loop */
+                    while ( have_posts() ) : the_post();
+                        get_template_part( 'content', get_post_format() );
+                    endwhile;
+                    fruitful_content_nav( 'nav-below' );
+
+                else :
+                    if (is_404()) {
+                        get_template_part( 'content', '404' );
+                    } else {
+                        get_template_part( 'no-results', 'archive' );
+                    }
+
+                endif; ?>
+
+            </div><!-- #content .site-content -->
+        </section><!-- #primary .content-area -->
+    <?php
+    }
+}
+
 if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 	function fruitful_get_content_with_custom_sidebar($curr_sidebar = null) {
 		global $post;
