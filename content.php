@@ -68,7 +68,7 @@
 	    <?php } ?>
     </div><!-- .entry-content -->
 	<?php endif; ?>
-
+    <?php if (is_single()) { ?>
 	<footer class="entry-meta">
 		<?php fruitful_entry_meta(); ?>
 		
@@ -78,5 +78,6 @@
 		
 		<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+    <?php } ?>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
