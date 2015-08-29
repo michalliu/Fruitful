@@ -9,8 +9,15 @@ get_header(); ?>
 
 <?php
 if (is_category()){
-    $category = get_the_category();
-    if (in_array(strtolower($category[0]->name) , ["news"])){
+    $categories = get_the_category();
+    $remove_sidebar = false;
+    foreach ($categories as $category ) {
+        if (in_array(strtolower($category->name) , ["news","tutorials"])) {
+            $remove_sidebar = true;
+            break;
+        }
+    }
+    if ($remove_sidebar){
         fruitful_get_content_without_sidebar();
     } else {
 ?>
