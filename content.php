@@ -60,9 +60,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
+        <?php if (!is_single()) {
+            the_excerpt();
+        } else { ?>
 		<?php the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'fruitful' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fruitful' ), 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
+	    <?php } ?>
+    </div><!-- .entry-content -->
 	<?php endif; ?>
 
 	<footer class="entry-meta">
