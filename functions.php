@@ -1662,8 +1662,8 @@ if(!function_exists('fruitful_is_latest_posts_page')){
 	}
 }
 
-if ( ! function_exists( 'fruitful_get_content_news' ) ){
-    function mq_get_content_news(){
+if ( ! function_exists( 'fruitful_get_content_without_sidebar' ) ){
+    function fruitful_get_content_without_sidebar(){
         ?>
         <section id="primary" class="content-area">
             <div id="content" class="site-content" role="main">

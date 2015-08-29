@@ -10,8 +10,8 @@ get_header(); ?>
 <?php
 if (is_category()){
     $category = get_the_category();
-    if (strtolower($category[0]->name) == "news"){
-        mq_get_content_news();
+    if (in_array(strtolower($category[0]->name) , ["news"])){
+        fruitful_get_content_without_sidebar();
     } else {
 ?>
 	<?php fruitful_get_content_with_custom_sidebar('blogright'); ?>
