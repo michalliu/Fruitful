@@ -7,7 +7,7 @@
 ?>
 <?php $options = fruitful_get_theme_options(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog_post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog_post' . (is_single() ? ' single-post' : '')); ?>>
 	<?php $day 		 = get_the_date('d'); 
 		  $month_abr = get_the_date('M');
 	?>
@@ -15,10 +15,17 @@
 		<a href="<?php the_permalink(); ?>" rel="bookmark">
 	<?php endif; ?>	
 	
+    <?php if (is_single()) { ?>
+        <div class="share-buttons" style="float:right;">
+            <?php fruitful_the_sharebuttons(); ?>
+        </div>
+    <?php } else { ?>
+
 	<div class="date_of_post updated">
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
+    <?php } ?>
 	<?php if (get_the_title() == '') : ?>
 		</a>
 	<?php endif; ?>
@@ -53,7 +60,22 @@
 				} ?>
 		<?php endif; // is_single() ?>
 	</header><!-- .entry-header -->
-
+    <?php if (is_single()) : ?>
+        <div class="meta-section tags">
+                <span class="meta-value">
+                    <span class="tutorial-date"><?php echo get_the_date(); ?></span>
+                </span>
+            <?php
+            /* translators: used between list items, there is a space after the comma */
+            $tags_list = get_the_tag_list( '', __( ', ', 'fruitful' ) );
+            if ( $tags_list ) : ?>
+                <span class="tag-links">
+			            <?php // printf( __( 'Tagged %1$s', 'fruitful' ), $tags_list ); ?>
+                        <?php echo $tags_list; ?>
+		            </span>
+            <?php endif; // End if $tags_list ?>
+        </div>
+    <?php endif; ?>
 	<?php if ( (is_search())) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
