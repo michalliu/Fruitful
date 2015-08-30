@@ -359,7 +359,11 @@ function fruitful_fonts_list() {
 		'25' => array(
 			'value' => 	   'Droid Sans, sans-serif',
 			'label' => __( 'Droid Sans, sans-serif', 'fruitful' )
-		)
+		),
+        '26' => array(
+        'value' => 	   'Oxygen, sans-serif',
+        'label' => __( 'Oxygen, sans-serif', 'fruitful' )
+        )
 	);
 
 	return apply_filters( 'fruitful_fonts_list', $font_family_options );

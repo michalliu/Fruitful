@@ -364,6 +364,7 @@ if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
 		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
 		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Old+Standard+TT:400,400italic,700';
 		$fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Droid+Sans:400,700';
+        $fonts_[] = 'gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Oxygen%3A400%2C700';
 
 		if (!empty($inFont)) {
 			$font_name = $inFont;
