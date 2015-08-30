@@ -1400,16 +1400,7 @@ function fruitful_entry_meta() {
 		</span>
 	<?php endif; // End if categories ?>
 
-	<?php
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'fruitful' ) );
-		if ( $tags_list ) :
-	?>
-		<span class="tag-links">
-			<?php // printf( __( 'Tagged %1$s', 'fruitful' ), $tags_list ); ?>
-			<?php echo $tags_list; ?>
-		</span> 
-		<?php endif; // End if $tags_list ?>
+
 	<?php endif; // End if 'post' == get_post_type() ?>
 <?php 
 }
@@ -1981,5 +1972,12 @@ if (!function_exists('fruitful_add_googleanalytics')) {
   ga('send', 'pageview');
 
 </script>";
+    }
+}
+
+if ( ! function_exists( 'fruitful_the_sharebuttons' ) ) {
+    function fruitful_the_sharebuttons(){
+        //echo "share buttons";
+        apply_filters('fruitful_the_sharebuttons', '');
     }
 }
