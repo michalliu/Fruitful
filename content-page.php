@@ -22,6 +22,11 @@
             <h1 class="post-title entry-title"><?php the_title(); ?></h1>
         </header>
     <?php } ?>
+    <div class="meta-section tags">
+            <span class="meta-value">
+                <span class="tutorial-date"><?php echo get_the_date(); ?></span>
+            </span>
+    </div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fruitful' ), 'after' => '</div>' ) ); ?>

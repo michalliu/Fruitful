@@ -1293,6 +1293,7 @@ header.post-header, .blog_post {
 	position:relative;
 	top: -6px;
 }
+.page-template-wiki .post-title,
 .blog .post-title,
 .single .post-title{
 	line-height:24px;
@@ -1349,6 +1350,7 @@ header.post-header, .blog_post {
 	background:url(images/tag.png) no-repeat 0 3px transparent;
 	margin-left:10px;
 }
+.page-template-wiki .post-content .tags,
 .blog_post .post-content .tags{
 	font-size: 16px;
 	color:#b5b5b5;
