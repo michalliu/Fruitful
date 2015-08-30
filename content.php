@@ -6,7 +6,11 @@
  */
 ?>
 <?php $options = fruitful_get_theme_options(); ?>
-
+<?php if (is_single()) { ?>
+    <div class="share-buttons">
+        <?php fruitful_the_sharebuttons(); ?>
+    </div>
+<?php } ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog_post' . (is_single() ? ' single-post' : '')); ?>>
 	<?php $day 		 = get_the_date('d'); 
 		  $month_abr = get_the_date('M');
@@ -15,12 +19,7 @@
 		<a href="<?php the_permalink(); ?>" rel="bookmark">
 	<?php endif; ?>	
 	
-    <?php if (is_single()) { ?>
-        <div class="share-buttons">
-            <?php fruitful_the_sharebuttons(); ?>
-        </div>
-    <?php } else { ?>
-
+    <?php if (is_category()) { ?>
 	<div class="date_of_post updated">
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
