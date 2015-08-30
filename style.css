@@ -1319,6 +1319,9 @@ header.post-header, .blog_post {
 	margin-top:0;
 	line-height:28px;
 }
+.single-post.blog_post .share-buttons{
+	float:right;
+}
 .single-post.blog_post .post-content .entry-content p:first-child{
 	margin-top:0;
 }

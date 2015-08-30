@@ -16,7 +16,7 @@
 	<?php endif; ?>	
 	
     <?php if (is_single()) { ?>
-        <div class="share-buttons" style="float:right;">
+        <div class="share-buttons">
             <?php fruitful_the_sharebuttons(); ?>
         </div>
     <?php } else { ?>
