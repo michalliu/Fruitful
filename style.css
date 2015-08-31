@@ -2360,6 +2360,7 @@ aside #lang_sel {
 	#page-header .head-container .container header .header-hgroup { margin: 0 0 15px; }
 	.select-menu { display:block; }
 	#back-top { display: none; }
+	.page-template-wiki .post-content,
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,
 	.search .blog_post .post-content {width: 338px;}
