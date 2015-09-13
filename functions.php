@@ -2014,18 +2014,31 @@ if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
     function mqmaker_menu_ugly_fix($nav_menu){
         //return "<textarea>" . $nav_menu . "</textarea>";
         $path=preg_replace('#^https?:\/\/' . $_SERVER['SERVER_NAME'] . '#i','',get_the_permalink());
-        $isproduct_page = preg_match('/^\/product/', $path);
+        $isproduct_page = preg_match('#^/product#', $path);
+        $istutorial_page = preg_match('#^/tutorial#', $path);
+        $delimiter = "li";
         if ($isproduct_page) {
-            $menuitems = explode('li', $nav_menu);
+            $menuitems = explode($delimiter, $nav_menu);
             $newmenus = array();
             foreach ($menuitems as $itemstr) {
-                if (preg_match('#Buy<\/a>#i', $itemstr)) {
+                if (preg_match('#Buy</a>#i', $itemstr)) {
                     array_push($newmenus, str_replace("menu-item", "menu-item current-menu-item", $itemstr));
                 } else {
                     array_push($newmenus, $itemstr);
                 }
             }
-            return join("li", $newmenus);
+            return join($delimiter, $newmenus);
+        } else if ($istutorial_page){
+            $menuitems = explode($delimiter, $nav_menu);
+            $newmenus = array();
+            foreach ($menuitems as $itemstr) {
+                if (preg_match('#Docs</a>#i', $itemstr)) {
+                    array_push($newmenus, str_replace("menu-item", "menu-item current-menu-item", $itemstr));
+                } else {
+                    array_push($newmenus, $itemstr);
+                }
+            }
+            return join($delimiter, $newmenus);
         }
         return $nav_menu;
     }
