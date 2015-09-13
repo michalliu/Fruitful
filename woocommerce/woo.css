@@ -1193,7 +1193,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce-page div.product div.images, 
 	body.woocommerce #content div.product div.images, 
 	body.woocommerce-page #content div.product div.images{float:left; width:350px; margin:0 25px 0 0}
-	.single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 10px;left: 278px;}
+	.single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: -12px;left: 285px;}
 	/*product category*/
 	body.woocommerce.archive.tax-product_cat #page .woo-loop-content{padding: 0;}
 	
