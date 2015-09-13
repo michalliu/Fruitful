@@ -2009,3 +2009,24 @@ if ( ! function_exists('woocommerce_shipping_calculator_enable_state') ) {
     }
 }
 
+add_filter('wp_nav_menu', 'mqmaker_menu_ugly_fix');
+if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
+    function mqmaker_menu_ugly_fix($nav_menu){
+        //return "<textarea>" . $nav_menu . "</textarea>";
+        $path=preg_replace('#^https?:\/\/' . $_SERVER['SERVER_NAME'] . '#i','',get_the_permalink());
+        $isproduct_page = preg_match('/^\/product/', $path);
+        if ($isproduct_page) {
+            $menuitems = explode('li', $nav_menu);
+            $newmenus = array();
+            foreach ($menuitems as $itemstr) {
+                if (preg_match('#Buy<\/a>#i', $itemstr)) {
+                    array_push($newmenus, str_replace("menu-item", "menu-item current-menu-item", $itemstr));
+                } else {
+                    array_push($newmenus, $itemstr);
+                }
+            }
+            return join("li", $newmenus);
+        }
+        return $nav_menu;
+    }
+}
