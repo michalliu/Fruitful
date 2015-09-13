@@ -1981,3 +1981,9 @@ if ( ! function_exists( 'fruitful_the_sharebuttons' ) ) {
         apply_filters('fruitful_the_sharebuttons', '');
     }
 }
+
+if ( ! function_exists( 'is_doc_frontpage' ) ) {
+    function is_doc_frontpage(){
+        return is_page("doc");
+    }
+}
