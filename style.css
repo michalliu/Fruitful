@@ -2363,7 +2363,7 @@ aside #lang_sel {
 	.page-template-wiki .post-content,
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,
-	.search .blog_post .post-content {width: 338px;}
+	.search .blog_post .post-content {width: 100%;}
 	input#s { width:348px; }	
 	body.post-type-archive #searchform input#s{max-width:100%}
 	.comment-meta{	width:80%;}
