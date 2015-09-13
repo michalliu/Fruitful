@@ -2001,3 +2001,11 @@ if ( ! function_exists('woocommerce_shipping_calculator_enable_city') ) {
         return false;
     }
 }
+
+add_filter( 'woocommerce_shipping_calculator_enable_state', 'woocommerce_shipping_calculator_enable_state');
+if ( ! function_exists('woocommerce_shipping_calculator_enable_state') ) {
+    function woocommerce_shipping_calculator_enable_state(){
+        return false;
+    }
+}
+
