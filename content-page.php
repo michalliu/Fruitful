@@ -8,7 +8,7 @@
  */
 ?>
 <?php if(!is_front_page() &&
-    !is_doc_frontpage() && !is_cart()) : ?>
+    !is_doc_frontpage() && !is_cart() && !is_checkout() && !is_account_page()) : ?>
 <div class="share-buttons">
     <?php fruitful_the_sharebuttons(); ?>
 </div>
@@ -19,7 +19,7 @@
 		<div class="entry-thumbnail"><?php the_post_thumbnail(); ?></div>
 	<?php endif; ?>
     <?php if (!is_front_page() && // doc首页不显示标题，其它页面显示
-        !is_doc_frontpage() && !is_cart()) {?>
+        !is_doc_frontpage() && !is_cart() && !is_checkout() && !is_account_page()) {?>
         <header class="post-header">
             <h1 class="post-title entry-title"><?php echo ucfirst(get_the_title()); ?></h1>
         </header>
