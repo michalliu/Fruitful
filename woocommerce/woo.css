@@ -279,6 +279,9 @@ body.single.woocommerce-page .woocommerce-breadcrumb{margin-bottom:40px;}
 .archive.woocommerce .woocommerce-breadcrumb a,
 .archive.woocommerce-page .woocommerce-breadcrumb a{line-height:35px;}
 
+.woocommerce ul.products li.product{
+	border:1px solid rgb(204, 204, 204);
+}
 .woocommerce ul.products li.product:hover,
 .woocommerce-page ul.products li.product:hover {
 box-shadow: 0 0px 5px 0 rgba(0,0,0,0.3);
@@ -832,6 +835,8 @@ body.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li:before{d
 	border-radius:0;
 	padding:0px;
 	margin:6px;
+	top: -12px;
+	right: -10px;
 }
 
 .single.woocommerce .related span.onsale, .single.woocommerce-page .related  span.onsale	{top:50px; left:278px;}
