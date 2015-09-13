@@ -1987,3 +1987,17 @@ if ( ! function_exists( 'is_doc_frontpage' ) ) {
         return is_page("doc");
     }
 }
+
+add_filter( 'woocommerce_shipping_calculator_enable_postcode', 'woocommerce_shipping_calculator_enable_postcode');
+if ( ! function_exists('woocommerce_shipping_calculator_enable_postcode') ) {
+    function woocommerce_shipping_calculator_enable_postcode(){
+        return false;
+    }
+}
+
+add_filter( 'woocommerce_shipping_calculator_enable_city', 'woocommerce_shipping_calculator_enable_city');
+if ( ! function_exists('woocommerce_shipping_calculator_enable_city') ) {
+    function woocommerce_shipping_calculator_enable_city(){
+        return false;
+    }
+}
