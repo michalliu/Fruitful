@@ -1172,7 +1172,7 @@ section {
 }
 
 #page-header .head-container{
-	z-index:9;
+	z-index:1000;
 }
 #page-header .container header .header-hgroup.left-pos {
     float:left;
@@ -1940,6 +1940,7 @@ address {
 	width:100%;
 	display:block;
 	background-repeat:no-repeat;
+    background-color:#FFFFFF;
 }
 
 .head-container.fixed {
