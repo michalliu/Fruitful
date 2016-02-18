@@ -392,14 +392,25 @@ if ( ! function_exists( 'fruitful_add_custom_fonts' ) ) {
 		
 		$font_url = array_filter($font_url);
 		$font_url = array_unique($font_url);
-		
+
+        $opensans_injected = false;
 		if (!empty($font_url)) {
 			foreach ($font_url as $font) {
 				$unq_id = uniqid('custom_fonts_');
 				wp_register_style($unq_id, $font);
 				wp_enqueue_style($unq_id);
+                if (strpos($font, "css?family=Open+Sans") !== false) {
+                    $opensans_injected = true;
+                }
 			}
-		}	
+		}
+
+        // OpenSans must be injected
+        if (!$opensans_injected) {
+            $unq_id = uniqid('custom_fonts_');
+            wp_register_style($unq_id, "//gogo.mqmaker.com/moc-sipaelgoog-stnof/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext&ver=4.3-alpha-32327");
+            wp_enqueue_style($unq_id);
+        }
 	}
 }
 
