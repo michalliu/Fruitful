@@ -2033,32 +2033,40 @@ if ( ! function_exists( 'is_realy_woocommerce_page' ) ) {
     }
 }
 
-add_filter( 'woocommerce_shipping_calculator_enable_postcode', 'woocommerce_shipping_calculator_enable_postcode');
-if ( ! function_exists('woocommerce_shipping_calculator_enable_postcode') ) {
-    function woocommerce_shipping_calculator_enable_postcode(){
+add_filter( 'woocommerce_shipping_calculator_enable_postcode', 'fruitful_woocommerce_shipping_calculator_enable_postcode');
+if ( ! function_exists('fruitful_woocommerce_shipping_calculator_enable_postcode') ) {
+    function fruitful_woocommerce_shipping_calculator_enable_postcode(){
         return false;
     }
 }
 
-add_filter( 'woocommerce_shipping_calculator_enable_city', 'woocommerce_shipping_calculator_enable_city');
-if ( ! function_exists('woocommerce_shipping_calculator_enable_city') ) {
-    function woocommerce_shipping_calculator_enable_city(){
+add_filter( 'woocommerce_shipping_calculator_enable_city', 'fruitful_woocommerce_shipping_calculator_enable_city');
+if ( ! function_exists('fruitful_woocommerce_shipping_calculator_enable_city') ) {
+    function fruitful_woocommerce_shipping_calculator_enable_city(){
         return false;
     }
 }
 
-add_filter( 'woocommerce_shipping_calculator_enable_state', 'woocommerce_shipping_calculator_enable_state');
-if ( ! function_exists('woocommerce_shipping_calculator_enable_state') ) {
-    function woocommerce_shipping_calculator_enable_state(){
+add_filter( 'woocommerce_shipping_calculator_enable_state', 'fruitful_woocommerce_shipping_calculator_enable_state');
+if ( ! function_exists('fruitful_woocommerce_shipping_calculator_enable_state') ) {
+    function fruitful_woocommerce_shipping_calculator_enable_state(){
+        return false;
+    }
+}
+
+add_filter( 'woocommerce_checkout_show_terms', 'fruitful_woocommerce_checkout_show_terms');
+if ( ! function_exists('fruitful_woocommerce_checkout_show_terms') ) {
+    function fruitful_woocommerce_checkout_show_terms(){
         return false;
     }
 }
 
 add_filter('wp_nav_menu', 'mqmaker_menu_ugly_fix');
 if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
-    function mqmaker_menu_ugly_fix($nav_menu){
+    function mqmaker_menu_ugly_fix($nav_menu)
+    {
         //return "<textarea>" . $nav_menu . "</textarea>";
-        $path=preg_replace('#^https?:\/\/' . $_SERVER['SERVER_NAME'] . '#i','',get_the_permalink());
+        $path = preg_replace('#^https?:\/\/' . $_SERVER['SERVER_NAME'] . '#i', '', get_the_permalink());
         $isproduct_page = preg_match('#^/product#', $path);
         $istutorial_page = preg_match('#^/tutorial#', $path);
         $delimiter = "li";
@@ -2073,7 +2081,7 @@ if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
                 }
             }
             return join($delimiter, $newmenus);
-        } else if ($istutorial_page){
+        } else if ($istutorial_page) {
             $menuitems = explode($delimiter, $nav_menu);
             $newmenus = array();
             foreach ($menuitems as $itemstr) {
@@ -2086,12 +2094,5 @@ if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
             return join($delimiter, $newmenus);
         }
         return $nav_menu;
-    }
-}
-
-add_filter( 'woocommerce_checkout_show_terms', 'woocommerce_checkout_show_terms');
-if ( ! function_exists('woocommerce_checkout_show_terms') ) {
-    function woocommerce_checkout_show_terms(){
-        return false;
     }
 }
