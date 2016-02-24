@@ -550,8 +550,8 @@ button, input {
 button,html input[type="button"],input[type="reset"],input[type="submit"] {
     background:#f15a23;
 	border:none;
-    font-family:"Open Sans";
-    color: #fff;
+    font-family:"Open Sans", sans-serif;
+    color: #fff !important;
 	text-transform:uppercase;
     cursor:pointer;
     font-size:1.4rem;
