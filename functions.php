@@ -2088,3 +2088,10 @@ if ( ! function_exists('mqmaker_menu_ugly_fix') ) {
         return $nav_menu;
     }
 }
+
+add_filter( 'woocommerce_checkout_show_terms', 'woocommerce_checkout_show_terms');
+if ( ! function_exists('woocommerce_checkout_show_terms') ) {
+    function woocommerce_checkout_show_terms(){
+        return false;
+    }
+}
