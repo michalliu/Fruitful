@@ -1999,6 +1999,40 @@ if ( ! function_exists( 'is_doc_frontpage' ) ) {
     }
 }
 
+if ( ! function_exists( 'is_realy_woocommerce_page' ) ) {
+    /**
+     * is_realy_woocommerce_page - Returns true if on a page which uses WooCommerce templates (cart and checkout are standard pages with shortcodes and which are also included)
+     *
+     * @access public
+     * @return bool
+     */
+    function is_realy_woocommerce_page()
+    {
+        if (function_exists("is_woocommerce") && is_woocommerce()) {
+            return true;
+        }
+        $woocommerce_keys = array("woocommerce_shop_page_id",
+            "woocommerce_terms_page_id", // terms
+            "woocommerce_cart_page_id", // cart
+            "woocommerce_checkout_page_id", // checkout
+            "woocommerce_pay_page_id", // checkout wc-page-functions.php
+            "woocommerce_thanks_page_id", // checkout
+            "woocommerce_myaccount_page_id", // myaccount
+            "woocommerce_edit_address_page_id", // myaccount
+            "woocommerce_view_order_page_id", // view_order
+            "woocommerce_order_tracking_page_id", // order_tracking
+            "woocommerce_change_password_page_id", // myaccount
+            "woocommerce_logout_page_id", // unhandled
+            "woocommerce_lost_password_page_id"); // myaccount
+        foreach ($woocommerce_keys as $wc_page_id) {
+            if (get_the_ID() == get_option($wc_page_id, 0)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
 add_filter( 'woocommerce_shipping_calculator_enable_postcode', 'woocommerce_shipping_calculator_enable_postcode');
 if ( ! function_exists('woocommerce_shipping_calculator_enable_postcode') ) {
     function woocommerce_shipping_calculator_enable_postcode(){

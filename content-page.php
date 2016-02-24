@@ -8,7 +8,7 @@
  */
 ?>
 <?php if(!is_front_page() &&
-    !is_doc_frontpage() && !is_cart() && !is_checkout() && !is_account_page()) : ?>
+    !is_doc_frontpage() && !is_realy_woocommerce_page()) : ?>
 <div class="share-buttons">
     <?php fruitful_the_sharebuttons(); ?>
 </div>
