@@ -308,6 +308,8 @@ function fruitful_scripts() {
 
     if (is_page_template('page-templates/wiki.php')) {
         wp_enqueue_style('github-markdown-style', get_template_directory_uri() . '/css/github-markdown.css');
+    } else if (is_page_template('page-templates/woo-page.php')) {
+        wp_enqueue_style('github-markdown-style', get_template_directory_uri() . '/css/github-markdown.css');
     }
     wp_enqueue_style('glyphicon-style',  get_stylesheet_directory_uri() . '/css/glyphicon.css');
 }

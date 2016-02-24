@@ -1242,6 +1242,7 @@ span.text_orange {
     color:#777;
     float:left
 }
+.page-template-woo-page article,
 .page-template-wiki article,
 header.post-header, .blog_post {
     float:left;
@@ -1293,6 +1294,7 @@ header.post-header, .blog_post {
 	position:relative;
 	top: -6px;
 }
+.page-template-woo-page .post-title,
 .page-template-wiki .post-title,
 .blog .post-title,
 .single .post-title{
@@ -1309,6 +1311,7 @@ header.post-header, .blog_post {
 	float:none;
 	margin:0 auto;
 }
+.page-template-woo-page .post-content,
 .page-template-wiki .post-content{
 	width:884px;
 	margin:0 auto;
@@ -1319,6 +1322,7 @@ header.post-header, .blog_post {
 .search .blog_post .post-content{
     width:884px;
 }
+.page-template-woo-page .post-content .entry-content,
 .page-template-wiki .post-content .entry-content,
 .blog_post .post-content .entry-content,
 .blog_post .post-content .entry-summary{
@@ -1332,6 +1336,7 @@ header.post-header, .blog_post {
 .single-post.blog_post .post-content .entry-content p:first-child{
 	margin-top:0;
 }
+.page-template-woo-page .post-content .entry-content,
 .page-template-wiki .post-content .entry-content,
 .single-post.blog_post .post-content .entry-content {
 	padding:0px 4.4% 10px 4.4%;
@@ -1350,6 +1355,7 @@ header.post-header, .blog_post {
 	background:url(images/tag.png) no-repeat 0 3px transparent;
 	margin-left:10px;
 }
+.page-template-woo-page .post-content .tags,
 .page-template-wiki .post-content .tags,
 .blog_post .post-content .tags{
 	font-size: 16px;
@@ -1475,6 +1481,7 @@ header.post-header .post-title {
     width: 91.21%;
     word-wrap: break-word;
 }
+.page-template-woo-page header.post-header .post-title,
 .page-template-wiki header.post-header .post-title,
 .single-post header.post-header .post-title {
     border-bottom:none;
@@ -2361,6 +2368,7 @@ aside #lang_sel {
 	#page-header .head-container .container header .header-hgroup { margin: 0 0 15px; }
 	.select-menu { display:block; }
 	#back-top { display: none; }
+    .page-template-woo-page .post-content,
 	.page-template-wiki .post-content,
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,

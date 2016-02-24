@@ -23,11 +23,13 @@
         <header class="post-header">
             <h1 class="post-title entry-title"><?php echo ucfirst(get_the_title()); ?></h1>
         </header>
+        <?php if (!is_realy_woocommerce_page()) { ?>
         <div class="meta-section tags">
                 <span class="meta-value">
                     <span class="tutorial-date"><?php echo get_the_date(); ?></span>
                 </span>
         </div>
+        <?php } ?>
     <?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
